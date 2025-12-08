@@ -1,0 +1,909 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 0%);
+  --gray1: hsl(0, 0%, 60%);
+  --gray2: hsl(0, 0%, 20%);
+  --gray200: hsl(0, 0%, 85%);
+  --primaryFont: "Alata", sans-serif;
+  --secondaryFont: "Josefin Sans", sans-serif;
+  --pageWidth: 80%;
+  --pageMaxWidth: 68.75rem;
+}
+
+body {
+  font-family: var(--primaryFont);
+  color: var(--gray1);
+  background-color: var(--white);
+  font-size: 0.9375rem;
+  font-weight: 400;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.section__hero {
+  height: 40rem;
+  background: url("./images/desktop/image-hero.jpg"), hsla(0, 0%, 0%, 0.4);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: multiply;
+  padding-top: 2rem;
+}
+
+.header-logo {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+header {
+  position: fixed;
+  top: 0;
+  background-image: linear-gradient(
+    to bottom,
+    hsla(0, 0%, 0%, 0.4),
+    hsla(0, 0%, 0%, 0)
+  );
+  z-index: 100;
+  width: 100%;
+  min-width: 100vw;
+  backdrop-filter: blur(0.625rem);
+}
+
+.header-nav {
+  display: flex;
+  width: var(--pageWidth);
+  max-width: var(--pageMaxWidth);
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+  margin: 0 auto;
+}
+
+.header-ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  opacity: 0.9;
+}
+
+.header-ul li {
+  cursor: pointer;
+  position: relative;
+}
+
+.underbar {
+  width: 1.5rem;
+  height: 0.0938rem;
+  border-radius: 0.25rem;
+  background-color: var(--white);
+  position: absolute;
+  top: 1.75rem;
+  left: 0.75rem;
+  opacity: 0;
+}
+
+.opacity {
+  opacity: 1;
+}
+
+/* === hamburger menu=== */
+
+.hamburger-menu {
+  background-color: var(--black);
+  padding: 3rem 2rem;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  z-index: 34;
+}
+
+.logo-close {
+  /* display: flex; */
+  align-items: center;
+  justify-content: space-between;
+}
+
+.close-btn {
+  cursor: pointer;
+}
+
+.hamburger-ul {
+  /* display: flex; */
+  height: 100vh;
+  width: 100%;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  list-style: none;
+  gap: 2rem;
+}
+
+.hamburger-ul li {
+  color: var(--white);
+  font-family: var(--secondaryFont);
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 2.375rem;
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.hamburger-ul li:hover {
+  border-bottom: 0.075rem solid var(--white);
+  transition: all 0.3s ease;
+}
+
+/* === hamburger ends === */
+
+.hide {
+  display: none;
+}
+
+.block {
+  display: block;
+}
+
+.flex {
+  display: flex;
+}
+
+.hamburger-icon {
+  display: none;
+}
+
+.h1-wrapper {
+  width: var(--pageWidth);
+  max-width: var(--pageMaxWidth);
+  margin: 10rem auto;
+}
+
+h1 {
+  font-family: var(--secondaryFont);
+  font-size: 4.125rem;
+  text-transform: uppercase;
+  font-weight: 300;
+  color: var(--white);
+  width: 72%;
+  max-width: 50rem;
+  padding: 2.5rem;
+  border: 0.125rem solid var(--white);
+}
+
+.section__leader {
+  width: var(--pageWidth);
+  max-width: var(--pageMaxWidth);
+  margin: 10rem auto;
+  position: relative;
+}
+
+.section__leader-img {
+  width: 70%;
+  max-width: 45rem;
+  height: 31.25rem;
+  background-image: url("./images/desktop/image-interactive.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+.section__leader-h2 {
+  font-family: var(--secondaryFont);
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-weight: 300;
+  color: var(--black);
+}
+
+.section__leader-p {
+  margin-top: 2.5rem;
+  line-height: 1.6;
+}
+
+article {
+  width: 64%;
+  padding: 5rem;
+  background: var(--white);
+  position: absolute;
+  z-index: 10;
+  bottom: 0;
+  height: 60%;
+  right: 0;
+}
+
+.section__creations {
+  width: var(--pageWidth);
+  max-width: var(--pageMaxWidth);
+  margin: 11.25rem auto 6.25rem auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.section__creations-h2 {
+  font-family: var(--secondaryFont);
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-weight: 300;
+  color: var(--black);
+  grid-column-start: 1;
+  grid-row-end: 2;
+}
+
+.outlined-btn {
+  font-family: var(--primaryFont);
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.25rem;
+  color: var(--gray2);
+  background: none;
+  border: 0.0938rem solid var(--gray2);
+  border-radius: 0.125rem;
+  padding: 0.625rem 2.5rem 0.5rem 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  justify-self: end;
+  height: 64px;
+}
+
+.outlined-btn:hover {
+  background-color: var(--black);
+  color: var(--gray200);
+  transition: all 0.4s ease;
+}
+/* 
+.h2-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+} */
+
+.section__creations-wrapper {
+  width: 100%;
+  margin: 5.625rem auto 12.5rem auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.75rem;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.section__creations-card {
+  height: 28.125rem;
+  width: 100%;
+  background: url("./images/desktop/image-deep-earth.jpg"),
+    linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: multiply;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-family: var(--secondaryFont);
+  text-transform: uppercase;
+  font-size: 1.875rem;
+  color: var(--white);
+  font-weight: 200;
+  padding-bottom: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  cursor: pointer;
+}
+
+.section__creations-card:hover {
+  background: url("./images/desktop/image-deep-earth.jpg"),
+    hsla(0, 0%, 100%, 0.8);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: lighten;
+  color: var(--black);
+  transition: all 0.4s ease;
+}
+
+#card2 {
+  background: url("./images/desktop/image-night-arcade.jpg"),
+    linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: multiply;
+}
+
+#card2:hover {
+  background: url("./images/desktop/image-night-arcade.jpg"),
+    hsla(0, 0%, 100%, 0.8);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: lighten;
+  color: var(--black);
+  transition: all 0.4s ease;
+}
+#card3 {
+  background: url("./images/desktop/image-soccer-team.jpg"),
+    linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: multiply;
+}
+#card3:hover {
+  background: url("./images/desktop/image-soccer-team.jpg"),
+    hsla(0, 0%, 100%, 0.8);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: lighten;
+  color: var(--black);
+  transition: all 0.4s ease;
+}
+
+#card4 {
+  background: url("./images/desktop/image-grid.jpg"),
+    linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: multiply;
+}
+
+#card4:hover {
+  background: url("./images/desktop/image-grid.jpg"), hsla(0, 0%, 100%, 0.8);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: lighten;
+  color: var(--black);
+  transition: all 0.4s ease;
+}
+
+#card5 {
+  background: url("./images/desktop/image-from-above.jpg"),
+    linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: multiply;
+}
+
+#card5:hover {
+  background: url("./images/desktop/image-from-above.jpg"),
+    hsla(0, 0%, 100%, 0.8);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: lighten;
+  color: var(--black);
+  transition: all 0.4s ease;
+}
+
+#card6 {
+  background: url("./images/desktop/image-pocket-borealis.jpg"),
+    linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: multiply;
+}
+
+#card6:hover {
+  background: url("./images/desktop/image-pocket-borealis.jpg"),
+    hsla(0, 0%, 100%, 0.8);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: lighten;
+  color: var(--black);
+  transition: all 0.4s ease;
+}
+
+#card7 {
+  background: url("./images/desktop/image-curiosity.jpg"),
+    linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: multiply;
+}
+
+#card7:hover {
+  background: url("./images/desktop/image-curiosity.jpg"),
+    hsla(0, 0%, 100%, 0.8);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: lighten;
+  color: var(--black);
+  transition: all 0.4s ease;
+}
+
+#card8 {
+  background: url("./images/desktop/image-fisheye.jpg"),
+    linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: multiply;
+}
+
+#card8:hover {
+  background: url("./images/desktop/image-fisheye.jpg"), hsla(0, 0%, 100%, 0.8);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: lighten;
+  color: var(--black);
+  transition: all 0.4s ease;
+}
+
+footer {
+  background: var(--black);
+  padding: 2.5rem 0;
+}
+
+.footer-content {
+  width: var(--pageWidth);
+  max-width: var(--pageMaxWidth);
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.footer-logo {
+  display: block;
+  width: 9.375rem;
+  cursor: pointer;
+}
+
+.footer-ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  opacity: 0.9;
+}
+
+.footer-ul li {
+  cursor: pointer;
+  position: relative;
+  cursor: pointer;
+}
+
+.logo-ul {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.social-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-image: url("./images/icon-facebook.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  position: relative;
+}
+
+#social2 {
+  background-image: url("./images/icon-twitter.svg");
+}
+
+#social3 {
+  background-image: url("./images/icon-pinterest.svg");
+}
+
+#social4 {
+  background-image: url("./images/icon-instagram.svg");
+}
+
+.footer-ul-underbar {
+  width: 1.5rem;
+  height: 0.0938rem;
+  border-radius: 0.25rem;
+  background: var(--white);
+  position: absolute;
+  top: 1.5rem;
+  left: 0.8125rem;
+  margin-top: 0.5rem;
+}
+
+.footer-underbar {
+  width: 1.5rem;
+  height: 0.0938rem;
+  border-radius: 0.25rem;
+  background: var(--white);
+  position: absolute;
+  top: 1.5rem;
+  margin-top: 0.5rem;
+}
+.copyright {
+  font-size: 0.875rem;
+  opacity: 0.7;
+}
+
+.socials-copyright {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2rem;
+}
+
+.attribution {
+  background-color: var(--black);
+  padding-bottom: 1rem;
+  color: var(--gray2);
+}
+
+/* === responsive === */
+@media (max-width: 1300px) {
+  .section__creations-wrapper {
+    gap: 16px;
+  }
+}
+@media (max-width: 1200px) {
+  h1 {
+    width: 100%;
+  }
+  .h1-wrapper {
+    margin-top: 16.25rem;
+  }
+  .section__leader-h2,
+  .section__creations-h2 {
+    font-size: 2.25rem;
+  }
+
+  .section__leader {
+    margin: 6.25rem auto 0 auto;
+  }
+
+  .section__leader-img {
+    width: 100%;
+    max-width: 100vw;
+    height: 31.25rem;
+    background-image: url("./images/mobile/image-interactive.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+  }
+
+  article {
+    width: 90%;
+    padding: 5rem 0 0 0;
+    background: var(--white);
+    position: unset;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .section__creations-wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .section__creations-card {
+    background: url("./images/desktop/image-deep-earth.jpg"),
+      linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: multiply;
+  }
+  .section__creations-card:hover {
+    background: url("./images/desktop/image-deep-earth.jpg"),
+      hsla(0, 0%, 100%, 0.8);
+    background-blend-mode: lighten;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: var(--black);
+    transition: all 0.4s ease;
+  }
+}
+
+@media (max-width: 830px) {
+  .header-ul {
+    display: none;
+  }
+  .hamburger-icon {
+    display: block;
+    cursor: pointer;
+  }
+
+  .section__hero {
+    height: 40rem;
+  }
+
+  h1 {
+    font-size: 4rem;
+    width: 80vw;
+    margin: 0 auto;
+  }
+  .h1-wrapper {
+    width: var(--pageWidth);
+    max-width: var(--pageMaxWidth);
+    padding-bottom: 2.5rem;
+    margin-top: 180px;
+  }
+
+  .section__hero {
+    background: url("./images/mobile/image-hero.jpg"), hsla(0, 0%, 0%, 0.2);
+    height: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+    padding-top: 2rem;
+  }
+
+  .section__creations {
+    margin-top: 5rem;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  .logo-ul,
+  .socials-copyright {
+    align-items: center;
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    --pageWidth: 90%;
+    --pageMaxWidth: 90vw;
+  }
+  .section__hero {
+    height: 100vh;
+  }
+  article {
+    padding-bottom: 0;
+  }
+
+  h1 {
+    width: 100%;
+    font-size: 2.5rem;
+    line-height: 1.3;
+    padding: 1.5rem 1rem;
+  }
+
+  .section__leader-h2 {
+    font-size: 2rem;
+  }
+
+  .section__creations {
+    grid-template-columns: 1fr;
+  }
+  .section__creations-wrapper {
+    grid-template-columns: 1fr;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    margin: 2.5rem auto;
+  }
+
+  .section__creations-h2 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    justify-self: center;
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  .section__creations-card {
+    height: 12.5rem;
+    width: 100%;
+    background: url("./images/mobile/image-deep-earth.jpg"),
+      linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: multiply;
+    display: flex;
+    align-items: flex-end;
+    justify-content: start;
+    font-family: var(--secondaryFont);
+    text-transform: uppercase;
+    font-size: 1.875rem;
+    color: var(--white);
+    font-weight: 200;
+    padding-bottom: 2rem;
+    padding-left: 2rem;
+    padding-right: 40%;
+    cursor: pointer;
+  }
+
+  .section__creations-card:hover {
+    height: 12.5rem;
+    width: 100%;
+    background: url("./images/mobile/image-deep-earth.jpg"),
+      hsla(0, 0%, 100%, 0.8);
+    background-blend-mode: lighten;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: var(--black);
+    transition: all 0.4s ease;
+  }
+
+  #card2 {
+    background: url("./images/mobile/image-night-arcade.jpg"),
+      linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: multiply;
+  }
+
+  #card2:hover {
+    background: url("./images/mobile/image-night-arcade.jpg"),
+      hsla(0, 0%, 100%, 0.8);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: lighten;
+    color: var(--black);
+    transition: all 0.4s ease;
+  }
+
+  #card3 {
+    background: url("./images/mobile/image-soccer-team.jpg"),
+      linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: multiply;
+  }
+
+  #card3:hover {
+    background: url("./images/mobile/image-soccer-team.jpg"),
+      hsla(0, 0%, 100%, 0.8);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: lighten;
+    color: var(--black);
+    transition: all 0.4s ease;
+  }
+
+  #card4 {
+    background: url("./images/mobile/image-grid.jpg"),
+      linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: multiply;
+  }
+
+  #card4:hover {
+    background: url("./images/mobile/image-grid.jpg"), hsla(0, 0%, 100%, 0.8);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: lighten;
+    color: var(--black);
+    transition: all 0.4s ease;
+  }
+
+  #card5 {
+    background: url("./images/mobile/image-from-above.jpg"),
+      linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: multiply;
+  }
+
+  #card5:hover {
+    background: url("./images/mobile/image-from-above.jpg"),
+      hsla(0, 0%, 100%, 0.8);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: lighten;
+    color: var(--black);
+    transition: all 0.4s ease;
+  }
+
+  #card6 {
+    background: url("./images/mobile/image-pocket-borealis.jpg"),
+      linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: multiply;
+  }
+
+  #card6:hover {
+    background: url("./images/mobile/image-pocket-borealis.jpg"),
+      hsla(0, 0%, 100%, 0.8);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: lighten;
+    color: var(--black);
+    transition: all 0.4s ease;
+  }
+
+  #card7 {
+    background: url("./images/mobile/image-curiosity.jpg"),
+      linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: multiply;
+  }
+
+  #card7:hover {
+    background: url("./images/mobile/image-curiosity.jpg"),
+      hsla(0, 0%, 100%, 0.8);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: lighten;
+    color: var(--black);
+    transition: all 0.4s ease;
+  }
+
+  #card8 {
+    background: url("./images/mobile/image-fisheye.jpg"),
+      linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: multiply;
+  }
+
+  #card8:hover {
+    background: url("./images/mobile/image-fisheye.jpg"), hsla(0, 0%, 100%, 0.8);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: lighten;
+    color: var(--black);
+    transition: all 0.4s ease;
+  }
+
+  .outlined-btn {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    justify-self: center;
+  }
+
+  .footer-ul {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
