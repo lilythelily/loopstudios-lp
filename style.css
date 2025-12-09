@@ -294,7 +294,7 @@ article {
   background-position: center;
   background-size: cover;
   background-blend-mode: multiply;
-  display: flex;
+  /* display: flex;
   align-items: flex-end;
   justify-content: center;
   font-family: var(--secondaryFont);
@@ -304,11 +304,53 @@ article {
   font-weight: 200;
   padding-bottom: 2rem;
   padding-left: 2rem;
-  padding-right: 2rem;
+  padding-right: 2rem; */
   cursor: pointer;
+  position: relative;
 }
 
-.section__creations-card:hover {
+.section__creations-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    hsla(0, 0%, 100%, 0.8),
+    hsla(0, 0%, 100%, 0.7)
+  );
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  /* background-blend-mode: lighten; */
+  /* color: var(--black); */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.section__creations-card:hover::before {
+  opacity: 1;
+  background-blend-mode: luminosity;
+}
+
+.section__creations-text{
+  font-family: var(--secondaryFont);
+  text-transform: uppercase;
+  font-size: 1.875rem;
+  color: var(--white);
+  font-weight: 200;
+  position: absolute;
+  z-index: 43;
+  bottom: 24px;
+  left: 24px;
+}
+
+.black{
+  color: var(--black);
+}
+
+
+
+/* .section__creations-card:hover {
   background: url("./images/desktop/image-deep-earth.jpg"),
     hsla(0, 0%, 100%, 0.8);
   background-repeat: no-repeat;
@@ -317,7 +359,7 @@ article {
   background-blend-mode: lighten;
   color: var(--black);
   transition: all 0.4s ease;
-}
+} */
 
 #card2 {
   background: url("./images/desktop/image-night-arcade.jpg"),
@@ -328,7 +370,7 @@ article {
   background-blend-mode: multiply;
 }
 
-#card2:hover {
+/* #card2:hover {
   background: url("./images/desktop/image-night-arcade.jpg"),
     hsla(0, 0%, 100%, 0.8);
   background-repeat: no-repeat;
@@ -337,7 +379,7 @@ article {
   background-blend-mode: lighten;
   color: var(--black);
   transition: all 0.4s ease;
-}
+} */
 #card3 {
   background: url("./images/desktop/image-soccer-team.jpg"),
     linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
@@ -346,7 +388,7 @@ article {
   background-size: cover;
   background-blend-mode: multiply;
 }
-#card3:hover {
+/* #card3:hover {
   background: url("./images/desktop/image-soccer-team.jpg"),
     hsla(0, 0%, 100%, 0.8);
   background-repeat: no-repeat;
@@ -355,7 +397,7 @@ article {
   background-blend-mode: lighten;
   color: var(--black);
   transition: all 0.4s ease;
-}
+} */
 
 #card4 {
   background: url("./images/desktop/image-grid.jpg"),
@@ -366,7 +408,7 @@ article {
   background-blend-mode: multiply;
 }
 
-#card4:hover {
+/* #card4:hover {
   background: url("./images/desktop/image-grid.jpg"), hsla(0, 0%, 100%, 0.8);
   background-repeat: no-repeat;
   background-position: center;
@@ -374,7 +416,7 @@ article {
   background-blend-mode: lighten;
   color: var(--black);
   transition: all 0.4s ease;
-}
+} */
 
 #card5 {
   background: url("./images/desktop/image-from-above.jpg"),
@@ -384,7 +426,7 @@ article {
   background-size: cover;
   background-blend-mode: multiply;
 }
-
+/* 
 #card5:hover {
   background: url("./images/desktop/image-from-above.jpg"),
     hsla(0, 0%, 100%, 0.8);
@@ -394,7 +436,7 @@ article {
   background-blend-mode: lighten;
   color: var(--black);
   transition: all 0.4s ease;
-}
+} */
 
 #card6 {
   background: url("./images/desktop/image-pocket-borealis.jpg"),
@@ -405,7 +447,7 @@ article {
   background-blend-mode: multiply;
 }
 
-#card6:hover {
+/* #card6:hover {
   background: url("./images/desktop/image-pocket-borealis.jpg"),
     hsla(0, 0%, 100%, 0.8);
   background-repeat: no-repeat;
@@ -414,7 +456,7 @@ article {
   background-blend-mode: lighten;
   color: var(--black);
   transition: all 0.4s ease;
-}
+} */
 
 #card7 {
   background: url("./images/desktop/image-curiosity.jpg"),
@@ -425,7 +467,7 @@ article {
   background-blend-mode: multiply;
 }
 
-#card7:hover {
+/* #card7:hover {
   background: url("./images/desktop/image-curiosity.jpg"),
     hsla(0, 0%, 100%, 0.8);
   background-repeat: no-repeat;
@@ -434,7 +476,7 @@ article {
   background-blend-mode: lighten;
   color: var(--black);
   transition: all 0.4s ease;
-}
+} */
 
 #card8 {
   background: url("./images/desktop/image-fisheye.jpg"),
@@ -445,7 +487,7 @@ article {
   background-blend-mode: multiply;
 }
 
-#card8:hover {
+/* #card8:hover {
   background: url("./images/desktop/image-fisheye.jpg"), hsla(0, 0%, 100%, 0.8);
   background-repeat: no-repeat;
   background-position: center;
@@ -453,7 +495,7 @@ article {
   background-blend-mode: lighten;
   color: var(--black);
   transition: all 0.4s ease;
-}
+} */
 
 footer {
   background: var(--black);
@@ -616,7 +658,7 @@ footer {
     background-size: cover;
     background-blend-mode: multiply;
   }
-  .section__creations-card:hover {
+  /* .section__creations-card:hover {
     background: url("./images/desktop/image-deep-earth.jpg"),
       hsla(0, 0%, 100%, 0.8);
     background-blend-mode: lighten;
@@ -625,7 +667,7 @@ footer {
     background-size: cover;
     color: var(--black);
     transition: all 0.4s ease;
-  }
+  } */
 }
 
 @media (max-width: 830px) {
@@ -729,21 +771,36 @@ footer {
     background-position: center;
     background-size: cover;
     background-blend-mode: multiply;
-    display: flex;
+    /* display: flex;
     align-items: flex-end;
     justify-content: start;
     font-family: var(--secondaryFont);
     text-transform: uppercase;
-    font-size: 1.875rem;
+ 
     color: var(--white);
     font-weight: 200;
     padding-bottom: 2rem;
     padding-left: 2rem;
-    padding-right: 40%;
+    padding-right: 40%; */
     cursor: pointer;
   }
 
-  .section__creations-card:hover {
+  .section__creations-text{
+  font-family: var(--secondaryFont);
+  text-transform: uppercase;
+  font-size: 1.875rem;
+  color: var(--white);
+  font-weight: 200;
+  position: absolute;
+  z-index: 43;
+  bottom: 1rem;
+  left: 1rem;
+  width: 60%;
+}
+
+
+
+  /* .section__creations-card:hover {
     height: 12.5rem;
     width: 100%;
     background: url("./images/mobile/image-deep-earth.jpg"),
@@ -754,7 +811,7 @@ footer {
     background-size: cover;
     color: var(--black);
     transition: all 0.4s ease;
-  }
+  } */
 
   #card2 {
     background: url("./images/mobile/image-night-arcade.jpg"),
@@ -765,7 +822,7 @@ footer {
     background-blend-mode: multiply;
   }
 
-  #card2:hover {
+  /* #card2:hover {
     background: url("./images/mobile/image-night-arcade.jpg"),
       hsla(0, 0%, 100%, 0.8);
     background-repeat: no-repeat;
@@ -774,7 +831,7 @@ footer {
     background-blend-mode: lighten;
     color: var(--black);
     transition: all 0.4s ease;
-  }
+  } */
 
   #card3 {
     background: url("./images/mobile/image-soccer-team.jpg"),
@@ -785,7 +842,7 @@ footer {
     background-blend-mode: multiply;
   }
 
-  #card3:hover {
+  /* #card3:hover {
     background: url("./images/mobile/image-soccer-team.jpg"),
       hsla(0, 0%, 100%, 0.8);
     background-repeat: no-repeat;
@@ -794,7 +851,7 @@ footer {
     background-blend-mode: lighten;
     color: var(--black);
     transition: all 0.4s ease;
-  }
+  } */
 
   #card4 {
     background: url("./images/mobile/image-grid.jpg"),
@@ -805,7 +862,7 @@ footer {
     background-blend-mode: multiply;
   }
 
-  #card4:hover {
+  /* #card4:hover {
     background: url("./images/mobile/image-grid.jpg"), hsla(0, 0%, 100%, 0.8);
     background-repeat: no-repeat;
     background-position: center;
@@ -813,7 +870,7 @@ footer {
     background-blend-mode: lighten;
     color: var(--black);
     transition: all 0.4s ease;
-  }
+  } */
 
   #card5 {
     background: url("./images/mobile/image-from-above.jpg"),
@@ -824,7 +881,7 @@ footer {
     background-blend-mode: multiply;
   }
 
-  #card5:hover {
+  /* #card5:hover {
     background: url("./images/mobile/image-from-above.jpg"),
       hsla(0, 0%, 100%, 0.8);
     background-repeat: no-repeat;
@@ -833,7 +890,7 @@ footer {
     background-blend-mode: lighten;
     color: var(--black);
     transition: all 0.4s ease;
-  }
+  } */
 
   #card6 {
     background: url("./images/mobile/image-pocket-borealis.jpg"),
@@ -844,7 +901,7 @@ footer {
     background-blend-mode: multiply;
   }
 
-  #card6:hover {
+  /* #card6:hover {
     background: url("./images/mobile/image-pocket-borealis.jpg"),
       hsla(0, 0%, 100%, 0.8);
     background-repeat: no-repeat;
@@ -853,7 +910,7 @@ footer {
     background-blend-mode: lighten;
     color: var(--black);
     transition: all 0.4s ease;
-  }
+  } */
 
   #card7 {
     background: url("./images/mobile/image-curiosity.jpg"),
@@ -864,7 +921,7 @@ footer {
     background-blend-mode: multiply;
   }
 
-  #card7:hover {
+  /* #card7:hover {
     background: url("./images/mobile/image-curiosity.jpg"),
       hsla(0, 0%, 100%, 0.8);
     background-repeat: no-repeat;
@@ -873,7 +930,7 @@ footer {
     background-blend-mode: lighten;
     color: var(--black);
     transition: all 0.4s ease;
-  }
+  } */
 
   #card8 {
     background: url("./images/mobile/image-fisheye.jpg"),
@@ -884,7 +941,7 @@ footer {
     background-blend-mode: multiply;
   }
 
-  #card8:hover {
+  /* #card8:hover {
     background: url("./images/mobile/image-fisheye.jpg"), hsla(0, 0%, 100%, 0.8);
     background-repeat: no-repeat;
     background-position: center;
@@ -892,7 +949,7 @@ footer {
     background-blend-mode: lighten;
     color: var(--black);
     transition: all 0.4s ease;
-  }
+  } */
 
   .outlined-btn {
     grid-row-start: 3;

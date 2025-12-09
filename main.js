@@ -9,6 +9,7 @@ const header = document.querySelector("header");
 const headerList = document.querySelectorAll(".header-ul li");
 const footerList = document.querySelectorAll(".footer-ul li");
 const socials = document.querySelectorAll(".social-icon");
+const cards = document.querySelectorAll(".section__creations-card");
 
 // === hamburger menu control ===
 
@@ -43,6 +44,20 @@ headerList.forEach((list) => {
   });
 });
 
+// === card text hover ===
+
+cards.forEach((card) => {
+  card.addEventListener("mouseenter", () => {
+    card.firstElementChild.style.color = "#000";
+  });
+});
+
+cards.forEach((card) => {
+  card.addEventListener("mouseleave", () => {
+    card.firstElementChild.style.color = "#fff";
+  });
+});
+
 // === footer nav hover ===
 
 footerList.forEach((list) => {
@@ -71,14 +86,13 @@ socials.forEach((icon) => {
   });
 });
 
-
 // === scroll to top ===
 
 const footerLogo = document.querySelector(".footer-logo");
 
-footerLogo.addEventListener('click', () => {
-    scrollTo({
-        top: 0,
-        behavior: "smooth",
-    })
-})
+footerLogo.addEventListener("click", () => {
+  scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});
